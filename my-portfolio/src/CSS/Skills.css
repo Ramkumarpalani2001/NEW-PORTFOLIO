@@ -1,0 +1,102 @@
+/* Skills.css */
+.skills-container {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../images/img1.jpg'); /* Adjust the path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for better contrast with background */
+  }
+  
+  .skills-list {
+    width: 100%;
+    max-width: 600px; /* Adjust the max width */
+  }
+  
+  .skill-item {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative; /* Ensure proper positioning for the circle animation */
+    display: inline-block; /* Align the items horizontally if needed */
+  }
+  
+  .skill-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .skill-bar {
+    width: 80px; /* Width of the circle */
+    height: 80px; /* Height of the circle */
+    border-radius: 50%; /* Circular shape */
+    background: #333;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    background: linear-gradient(90deg, #4caf50 0%, rgba(76, 175, 80, 0) 100%); /* Gradient effect */
+    height: 100%;
+    width: 0; /* Start with 0 width */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%); /* Clip to a circle */
+    transition: width 2s ease-in-out; /* Smooth transition */
+  }
+  
+  /* Special Animation */
+  @keyframes fill {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .skill-level {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  
+  /* Apply special animation */
+  .skill-item:hover .skill-progress {
+    animation: fill 2s forwards; /* Apply fill animation */
+  }
+  
+  @media (max-width: 600px) {
+    .skill-item {
+      padding: 8px;
+    }
+  
+    .skill-bar {
+      width: 60px; /* Adjust for smaller screens */
+      height: 60px; /* Adjust for smaller screens */
+    }
+  
+    .skill-level {
+      font-size: 12px;
+    }
+  }
+  

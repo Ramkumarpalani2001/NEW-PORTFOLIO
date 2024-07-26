@@ -1,0 +1,93 @@
+/* About.css */
+.about-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image: url('../images/img1.jpg'); /* Adjust the path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile {
+    width: 300px; /* Increased size */
+    height: 450px; /* Increased size */
+    object-fit: cover;
+    border-radius: 10px; /* Square shape with rounded corners */
+    transition: transform 0.3s;
+    animation: pulse 2s infinite; /* Added animation */
+    margin-right: 20px; /* Space between logo and details */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .profile:hover {
+    transform: rotate(15deg); /* Change to rotate on hover */
+  }
+  
+  .details {
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .details h2 {
+    margin-top: 0;
+  }
+  
+  .details p {
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .profile {
+      width: 150px; /* Adjusted size for smaller screens */
+      height: 150px; /* Adjusted size for smaller screens */
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .details {
+      padding: 15px;
+    }
+  }
+
+  .resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+  

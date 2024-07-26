@@ -1,0 +1,51 @@
+/* Education.css */
+.education-container {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../images/img1.jpg'); /* Adjust the path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for better contrast with background */
+  }
+  
+  .education-slides {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .education-slide {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .education-slide h2 {
+    margin-top: 0;
+  }
+  
+  .education-slide p {
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .education-slides {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    .education-slide {
+      padding: 15px;
+    }
+  }
+  

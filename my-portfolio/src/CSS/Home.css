@@ -1,0 +1,121 @@
+/* Home.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../images/img1.jpg') no-repeat center center/cover;
+  z-index: -1;
+  filter: blur(8px);
+  animation: zoom 30s infinite;
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.profile-logo {
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  animation: fadeIn 2s;
+}
+
+.profile-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 3em;
+  animation: fadeIn 2s;
+}
+
+.description {
+  font-size: 1.5em;
+  margin-top: 0;
+  animation: fadeIn 2s;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 2em;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .description {
+    font-size: 1.2em;
+  }
+
+  .social-icons a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .social-icons a {
+    font-size: 1.2em;
+  }
+}

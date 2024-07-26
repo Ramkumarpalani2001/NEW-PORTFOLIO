@@ -1,0 +1,68 @@
+/* Contact.css */
+.contact-container {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../images/img1.jpg'); /* Adjust the path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for better contrast with background */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 0;
+  }
+  
+  .contact-input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-input:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 30px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .icon:hover {
+    color: #0073b1; /* Example color change on hover */
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 600px) {
+    .contact-form {
+      width: 100%;
+    }
+  
+    .icon {
+      font-size: 25px;
+    }
+  }
+  
